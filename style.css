@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@keyframes aumentarDiminuir {
+   /* cresce o botão */
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.botao-animado {
+    animation: aumentarDiminuir 0.3s ease;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#frase {
+    margin: 30px auto;
+    font-size: 28px;
+    color: palevioletred;
+    font-family: 'Quicksand', cursive;
+}
+
+button{
+    background-color: darkmagenta;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #ec407a; /* Cor ao passar o mouse */
+
+}
+button {
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1); /* aumenta 10% quando o mouse passar por cima */
+    cursor: pointer;
+}
+.galeria {
+    display: flex;
+    gap: 10px;          /* espaçamento entre as fotos */
+    flex-wrap: wrap;    /* pra quebrar linha se faltar espaço */
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+.galeria img {
+    width: 150px; /* tamanho padrão das fotos */
+    height: 150px;
+    object-fit: cover; /* corta a imagem pra preencher o quadrado, sem distorcer */
+    border-radius: 10px; /* cantinhos arredondados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.galeria img:hover {
+        transform: scale(2); /* efeito de zoom quando passa o mouse */
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+input {
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid #ff6ec4;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #7873f5;
+    box-shadow: 0 0 10px #ff6ec480;
+}
+.redes-sociais {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+}
+
+.redes-sociais a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.redes-sociais a img:hover {
+    transform: scale(1.3);
+}
+

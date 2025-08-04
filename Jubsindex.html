@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Munamor</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>💘 Frases para Munamor 💘</h1>
+
+<p id="Frase">Digite seu nome e clique no botão para ver uma frase!</p>
+
+<div class="interacao">
+    <input type="text" id="nome" placeholder="Digite seu nome aqui">
+    <button onclick="mostrarFrase()">Nova Frase</button>
+</div>
+
+<h2>Eu e você pra sempre ❤️</h2>
+
+<div class="galeria">
+    <img src="imagens/img1.jpg" alt="Foto nossa 1" />
+    <img src="imagens/img2.jpg" alt="Foto nossa 2" />
+    <img src="imagens/img3.jpg" alt="Foto nossa 3" />
+    <img src="imagens/img6.jpg" alt="Foto nossa 4" />
+    <img src="imagens/img5.jpg" alt="Foto nossa 5" />
+</div>
+<div class="redes-sociais">
+
+    <a href="https://instagram.com/josue.lima_" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/557998824515" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+</div>
+
+<!--<div style="position: fixed; bottom: 10px; right: 10px; text-align: center;">
+    <img src="data:image/png;base64,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" width="150" alt="QR Code para presentinho"><br>
+    <small>feito com amor 💘</small>
+</div>
+-->
+<script src="script.js"></script>
+
+<div id="pixqr"></div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+    const payload = "00020126360014BR.GOV.BCB.PIX0114+557999882451552040000530398654043.505802BR5917Josue Lima Santos6013Tomar do Geru62070503***6304FEF1"; // cola o payload completo aqui
+    QRCode.toCanvas(document.getElementById("pixqr"), payload, function (error) {
+        if (error) console.error(error);
+        console.log('QR gerado!');
+    });
+</script>
+</body>
+</html>
