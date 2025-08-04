@@ -22,24 +22,4 @@ function mostrarFrase(){
     void botao.offsetWidth;
     botao.classList.add("botao-animado") // Vai adicionar a classe da animação //
 
-    // pix julia //
-
-    const  chave = 7996509290
-    const Nome = "Juliana Oliveira"
-    const cidade = "Tomar_do_Geru"
-    const valor = 3.50
-
-    const payload = `
-000201
-26580014BR.GOV.BCB.PIX
-01${chave.length.toString().padStart(2, '0')}${chave}
-52040000
-5303986
-5404${valor.replace('.', '')}
-5802BR
-5913${nome}
-6010${cidade}
-62070503*** 
-6304
-`.replace(/\\s+/g, '');
 }
